@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="nav-brand">Media-App</div>
+        <div class="nav-links">
+            <a href="feed.html" class="active">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <div class="user-avatar-large" id="sidebarAvatar">U</div>
+                <h3 class="sidebar-name" id="sidebarName">Loading...</h3>
+                <p class="sidebar-handle" id="sidebarHandle">@loading</p>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-val" id="sidebarFollowers">0</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-val" id="sidebarFollowing">0</span>
+                        <span class="stat-label">Following</span>
+                    </div>
+                </div>
+
+                <a href="profile.html" class="btn-primary"
+                    style="display:block; margin-top:1rem; text-decoration:none;">My Profile</a>
+            </div>
+        </div>
+
+        <!-- Feed -->
+        <div class="feed-area">
+            <div class="post-box">
+                <textarea id="postText" placeholder="What's on your mind?"></textarea>
+                <div class="post-actions">
+                    <input type="file" id="postImage" accept="image/*" style="margin-top: 10px;">
+                    <button id="postBtn" class="btn-primary">Post</button>
+                </div>
+            </div>
+
+            <div id="postList">
+                <!-- Posts will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- User List Modal -->
+    <div id="userListModal" class="modal"
+        style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);">
+        <div class="modal-content"
+            style="background-color: var(--card-bg); margin: 15% auto; padding: 20px; border: 1px solid var(--border); width: 80%; max-width: 400px; border-radius: var(--radius);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 id="modalTitle">Users</h3>
+                <span class="close-modal" style="cursor: pointer; font-size: 1.5rem;">&times;</span>
+            </div>
+            <div id="modalUserList" style="max-height: 300px; overflow-y: auto;">
+                <!-- Users injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="App.js"></script>
+</body>
+
+</html>

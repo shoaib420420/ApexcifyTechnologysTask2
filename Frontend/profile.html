@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="nav-brand">Media-App</div>
+        <div class="nav-links">
+            <a href="feed.html">Home</a>
+            <a href="profile.html" class="active">Profile</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div style="width: 100%; grid-column: span 2;">
+            <div class="profile-header">
+                <div class="profile-banner"></div>
+
+                <div class="profile-avatar-wrapper">
+                    <div class="user-avatar-large" style="width: 120px; height: 120px; font-size: 3rem; margin: 0;"
+                        id="profileAvatar">U</div>
+                </div>
+
+                <h2 id="profileUsername" style="font-size: 1.5rem; margin-bottom: 0.25rem;">Loading...</h2>
+                <p id="profileHandle" style="color: var(--text-muted);">@loading</p>
+
+                <div class="profile-stats-grid">
+                    <div class="profile-stat">
+                        <span class="profile-stat-value" id="profileFollowers">0</span>
+                        <span class="profile-stat-label">Followers</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="profile-stat-value" id="profileFollowing">0</span>
+                        <span class="profile-stat-label">Following</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="profile-stat-value" id="profilePostCount">0</span>
+                        <span class="profile-stat-label">Posts</span>
+                    </div>
+                </div>
+
+                <button id="profileActionBtn" class="btn-outline">Edit Profile</button>
+                <input type="file" id="profilePicInput" style="display: none;" accept="image/*">
+            </div>
+
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem;">Posts</h3>
+            <div id="userPosts" class="user-posts-grid">
+            </div>
+        </div>
+    </div>
+
+    <script src="App.js"></script>
+</body>
+
+</html>
