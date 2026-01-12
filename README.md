@@ -1,6 +1,6 @@
 # Social Media App
 
-A full-stack social media application designed to connect friends. Users can register, login, post updates with images, like posts, comment, and follow/unfollow other users.
+A full-stack social media application designed to connect friends. Users can register, login, post updates with images, like posts, comment, and follow/unfollow other users. You can check project in video through this link: https://drive.google.com/file/d/1lIM3_b82XAz9AHzjFKVoZAwe202Fn8CE/view?usp=sharing
 
 ## 🚀 Features
 
